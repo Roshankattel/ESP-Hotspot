@@ -2,8 +2,8 @@
 | ----------------- | ------------- | ----------- | ---------------- |
 
 # ESP32 4G Hotspot Example
-This example demonstrates how to use the PCB Artists 4G Gateway as a Wi-Fi hotspot.
-A hotspot nables sharing of 4G cellular data with multiple sensor nodes within Wi-Fi range.
+This example demonstrates how to use the TTGO-A7670 Module  as a Wi-Fi hotspot.
+A hotspot enables sharing of 4G cellular data with multiple sensor nodes within Wi-Fi range.
 
 ## How to Use Example
 - Make sure that you are using IDF v.5.0.1
@@ -12,11 +12,10 @@ A hotspot nables sharing of 4G cellular data with multiple sensor nodes within W
 - Flash the build to your product by `idf.py build flash -b 921600 flash monitor -p COMx`
 - Once the Gateway connects to the internet over 4G, it will create a Wi-Fi access point. This may take a minute.
 - Connect to AP to use the internet!
+- NOTE: SSID is Hidden
 
 ## Hardware Required
-* Any PCB Artists Gateway or Controller listed in Supported Products above.
-* An ESP32 programmer connected to the Gateway via USB.
-* The board should be powered up using an external power source as outlined in the product's hardware guide.
+* LilyGo TTGO-A7670 Module 
 
 ## Example Output
 If you have configured the example correctly, you should see something like this in the terminal logs:
@@ -67,8 +66,6 @@ I (53413) wifi:mode : softAP (10:97:bd:13:13:61)
 I (53413) wifi:Total power save buffer number: 16
 I (53413) wifi:Init max length of beacon: 752/752
 I (53413) wifi:Init max length of beacon: 752/752
-I (53423) hotspot: wifi_init_softap finished. SSID:pcbartists password:password channel:1
+I (53423) hotspot: wifi_init_softap finished.SSID:roshan_ssid password:password channel:1
 W (53423) hotspot: Hotspot should now be functional...
 ```
-## More Information
-See [our website](https://www.pcbartists.com) for more information about our ESP32 4G Gateway and other IoT products.
